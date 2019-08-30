@@ -65,7 +65,7 @@ class SummarizationDatasetReader(DatasetReader):
 
 
     @staticmethod
-    def _tokens_to_ids(token: List[Token]) -> List[int]:
+    def _tokens_to_ids(tokens: List[Token]) -> List[int]:
         ids = dict()
         out = list()
         for token in tokens:
@@ -143,5 +143,5 @@ class SummarizationDatasetReader(DatasetReader):
 
         return Instance(result)
 
-    def parse_set(self,file_path:str) -> Iterable[Tuple(str,str)]:
+    def parse_set(self,file_path:str) -> Iterable[Tuple[str,str]]:
         raise NotImplementedError()

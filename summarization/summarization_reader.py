@@ -70,7 +70,7 @@ class SummarizationDatasetReader(DatasetReader):
         out = list()
         for token in tokens:
             out.append(ids.setdefault(token.text.lower(), len(ids)))
-        return tokens
+        return out
 
     def text_to_instance(self,
             source: str,
